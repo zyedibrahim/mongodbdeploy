@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-d
 dotenv.config()
 import express from "express"; // "type": "module"
 import moviesRouter from "./router/movies.router.js"
-
+import cors from cors
 
 
 // hi
@@ -14,7 +14,7 @@ const PORT = process.env.PORT;
 // const express = require("express");
 const app = express();
 app.use(express.json());
-
+app.subscribe(cors());
 
 // const PORT = 4000;
 // const PORT = process.env.PORT;
