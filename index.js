@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-d
 dotenv.config()
 import express from "express"; // "type": "module"
 import moviesRouter from "./router/movies.router.js"
-import cors from cors
+import cors from "cors"
 
 
 // hi
