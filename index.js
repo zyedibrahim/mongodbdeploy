@@ -14,7 +14,7 @@ const PORT = process.env.PORT;
 // const express = require("express");
 const app = express();
 app.use(express.json());
-app.subscribe(cors());
+app.use(cors());
 
 // const PORT = 4000;
 // const PORT = process.env.PORT;
