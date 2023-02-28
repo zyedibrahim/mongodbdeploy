@@ -16,7 +16,7 @@ export async function postmovies(data) {
   return await client
     .db("b42wd2")
     .collection("movies")
-    .insertMany(data);
+    .insertOne(data);
 }
 export async function getmoviebyid(id) {
   return await client
