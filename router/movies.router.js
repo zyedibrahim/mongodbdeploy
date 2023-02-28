@@ -20,7 +20,7 @@ router.get("/", async function (request, response) {
 
   });
   
-  router.post("/", async function (request, response) {
+  router.post("/add", async function (request, response) {
     const data = request.body;
   
     const result = await postmovies(data);
