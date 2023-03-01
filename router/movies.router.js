@@ -1,10 +1,18 @@
 import express from 'express';
 import { getmovies, getmoviebyid, postmovies, deletemovies, updatemovies } from './service/movies.service.js';
 const router = express.Router();
-
+import {auth} from '.././middleware/./auth.js'
 
 router.get("/", async function (request, response) {
-    const movies = await getmovies();
+
+console.log(request.query);
+
+if(request.query.rating){
+  request.query.rating = +request.query.rating
+}
+
+
+    const movies = await getmovies(request.query);
   response.send(movies);
   });
   
@@ -24,7 +32,7 @@ router.get("/", async function (request, response) {
     const data = request.body;
   
     const result = await postmovies(data);
-  
+         console.log(result)
     response.send(result);
   });
   
